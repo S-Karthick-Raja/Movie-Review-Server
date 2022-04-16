@@ -1,6 +1,5 @@
 const express = require("express");
 const dbConnect = require("./config/dbconnect");
-const error = require("./middlewares/errorMiddlewares-Handler");
 const usersRoute = require("./routes/usersRoute");
 const dotenv = require("dotenv");
 const movieRoute = require("./routes/movieRoute");
@@ -21,9 +20,6 @@ app.use(express.json());
 app.use("/api/users", usersRoute);
 // Books
 app.use("/api/movies", movieRoute);
-
-// Error middleware
-app.use(error.errorMiddlewareHandler);
 
 // SERVER
 const PORT = process.env.PORT || 9000;
