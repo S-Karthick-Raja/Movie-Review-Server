@@ -1,7 +1,5 @@
 const express = require("express");
-const expressAsyncHandler = require("express-async-handler");
 const asynHandler = require("express-async-handler");
-const authMiddleware = require("../middlewares/authMiddleware");
 const User = require("../models/users");
 const generateToken = require("../Utility/generateTokken");
 
